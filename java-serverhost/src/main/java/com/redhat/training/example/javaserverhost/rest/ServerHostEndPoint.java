@@ -13,13 +13,14 @@ public class ServerHostEndPoint {
   @Produces("text/plain")
   public Response doGet() {
     String host = "";
+    System.out.println(":D");
     try {
       host = InetAddress.getLocalHost().getHostName();
     }
     catch (Exception e) {
        e.printStackTrace();
     }
-    String msg = "I am running on server "+host+" Version 1.0 \n";
+    String msg = "I am running on server "+host+" Version 2.0 haha lol \n";
     return Response.ok(msg).build();
   }
 }
